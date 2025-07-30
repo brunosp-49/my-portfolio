@@ -29,7 +29,6 @@ import { useEffect, useState } from "react";
 import { ExternalIcon } from "./components/icons/externalIcon";
 import useWeb3forms from "@web3forms/react";
 import LoadingSpinner from "../../components/loadingSpinner";
-
 export const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,14 +36,12 @@ export const Contact = () => {
   const [isDisabled, setIsDisabled] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   useEffect(() => {
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const isFormComplete =
       name.trim() !== "" && isEmailValid && message.trim() !== "";
     setIsDisabled(!isFormComplete);
   }, [name, email, message]);
-
   const handleChange = (field: string, value: string) => {
     switch (field) {
       case "name":
@@ -60,7 +57,6 @@ export const Contact = () => {
         break;
     }
   };
-
   const { submit: onSubmit } = useWeb3forms({
     access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string,
     onSuccess: (msg, data) => {
@@ -77,7 +73,6 @@ export const Contact = () => {
       setIsLoading(false);
     },
   });
-
   const sendEmail = () => {
     {
       if (isDisabled || isLoading) return;
@@ -89,7 +84,6 @@ export const Contact = () => {
       });
     }
   };
-
   return (
     <Container>
       <SubContainer>
@@ -215,7 +209,7 @@ export const Contact = () => {
                 <HighlightText
                   fontSize={theme.typography.fontSize.body.lg}
                   lineHeight={theme.typography.lineHeight.body.lg}
-                  isBlock // Define o container como 'block'
+                  isBlock
                   segments={[
                     { text: "const ", color: theme.colors.purple[300] },
                     { text: "button ", color: theme.colors.teal[300] },
@@ -231,7 +225,7 @@ export const Contact = () => {
                   lineHeight={theme.typography.lineHeight.body.lg}
                   isBlock
                   segments={[
-                    { text: "\nconst ", color: theme.colors.purple[300] }, // \n para quebra de linha
+                    { text: "\nconst ", color: theme.colors.purple[300] },
                     { text: "message ", color: theme.colors.teal[300] },
                     { text: "= {\n", color: theme.colors.slate[200] },
                     { text: "\tname", color: theme.colors.indigo[300] },

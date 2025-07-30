@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import { Home } from "../pages/home";
-import { Contact } from "../pages/contact";
 import { About } from "../pages/about";
+import { NotFound } from "../pages/notFound";
+import { Contact } from "../pages/contact";
 import { Projects } from "../pages/projects";
 
 const Router = () => (
@@ -11,7 +12,7 @@ const Router = () => (
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
       <Route path="/projects" element={<Projects />} />
-      {/* <Route path="*" element={<NotFound />} /> */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
 );
