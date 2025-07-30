@@ -184,6 +184,7 @@ export const TechIcon = styled.img`
   height: 24px;
   border-radius: 4px;
   object-fit: contain;
+  z-index: 2;
 `;
 export const NoProjectsMessage = styled.p`
   color: ${theme.colors.slate[400]};

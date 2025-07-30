@@ -12,9 +12,9 @@ export const XIcon: React.FC<{ size: number }> = ({ size }) => (
     <polygon fill="#62748E" points="41,6 9.929,42 6.215,42 37.287,6"></polygon>
     <polygon
       fill="#020618"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       points="31.143,41 7.82,7 16.777,7 40.1,41"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     ></polygon>
     <path
       fill="#62748E"

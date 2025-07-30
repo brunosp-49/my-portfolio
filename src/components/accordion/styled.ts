@@ -4,6 +4,7 @@ export const AccordionContainer = styled.div`
   width: 100%;
   max-width: 800px;
   overflow: hidden;
+  user-select: none;
   @media (max-width: 1024px) {
     max-width: 100%;
     border-radius: 0;
