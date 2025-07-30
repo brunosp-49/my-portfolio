@@ -77,6 +77,7 @@ export const Link = styled.a<{
   fontWeight?: string;
   color?: string;
 }>`
+  text-decoration: none;
   font-size: ${({ fontSize }) => fontSize || theme.typography.fontSize.body.md};
   font-weight: ${({ fontWeight }) =>
     fontWeight || theme.typography.fontWeight.regular};

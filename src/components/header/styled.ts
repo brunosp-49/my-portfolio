@@ -103,6 +103,7 @@ export const HeaderTopBar = styled.div<Props>`
 export const MainContainer = styled.div<Props>`
   height: 56px;
   width: 100%;
+  user-select: none;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   display: flex;

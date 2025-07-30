@@ -18,7 +18,7 @@ import {
   CloseTabButton,
   TabContentArea,
 } from "./styled";
-import { Text } from "../../components/text";
+import { Link, Text } from "../../components/text";
 import type { TabContentData } from "../../types";
 import { tabContents } from "./components/tab";
 
@@ -119,16 +119,26 @@ export const About = () => {
                 },
                 {
                   title: "contact",
-                  componentToShow: (
+                  content: (
                     <>
                       <AccordionTitleContainer level={0}>
                         <EmailIcon />
-                        <Text>brunospdev@gmail.com</Text> {}
+                        <Link
+                          href="mailto:brunospdev@gmail.com"
+                          target="_blank"
+                        >
+                          brunospdev@gmail.com
+                        </Link>
                       </AccordionTitleContainer>
                       <Divider height={"8px"} /> {}
                       <AccordionTitleContainer level={0}>
                         <PhoneIcon />
-                        <Text>+55 12 98887-0530</Text> {}
+                        <Link
+                          href="https://api.whatsapp.com/send?phone=5512988870530"
+                          target="_blank"
+                        >
+                          +55 12 98887-0530
+                        </Link>
                       </AccordionTitleContainer>
                     </>
                   ),

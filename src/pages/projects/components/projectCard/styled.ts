@@ -25,15 +25,26 @@ export const ProjectCardContainer = styled.div`
 export const ProjectImage = styled.div<{ img: string }>`
   width: 100%;
   height: 34%;
-  object-fit: cover;
   display: flex;
-  background-size: cover;
   justify-content: flex-end;
   align-items: start;
+  background-size: cover;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.5);
   background-image: url(${(props) => props.img});
   border-bottom: 1px solid ${theme.colors.slate[700]};
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    border-radius: 8px 8px 0 0; /* Match the border radius */
+    z-index: 1;
+  }
 `;
 
 export const ProjectInfo = styled.div`
