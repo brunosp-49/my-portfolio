@@ -14,7 +14,7 @@ export const HeaderTopBar = styled.div<Props>`
   justify-content: space-between;
   border-bottom: 1px solid ${theme.colors.slate[700]};
   position: relative;
-  z-index: 11;
+  z-index: 14;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   #first-block {
@@ -109,9 +109,9 @@ export const MainContainer = styled.div<Props>`
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 10;
+  z-index: 13;
   flex-direction: row;
-  background-color: ${theme.colors.slate[900]};
+  background-color: ${({isMenuOpen})=> isMenuOpen ? theme.colors.slate[900]: "transparent"};
   @media (max-width: 1024px) {
     height: auto;
     min-height: ${({ isMenuOpen }) => (isMenuOpen ? "100%" : "56px")};
@@ -125,7 +125,7 @@ export const MainContainer = styled.div<Props>`
     transition: min-height 0.2s ease-in-out,
       border-bottom-left-radius 0.2s ease-in-out,
       border-bottom-right-radius 0.2s ease-in-out;
-    z-index: 15;
+    z-index: 18;
   }
 `;
 export const HamburgerIcon = styled.button<{ isMenuOpen: boolean }>`
@@ -134,7 +134,7 @@ export const HamburgerIcon = styled.button<{ isMenuOpen: boolean }>`
   border: 0;
   cursor: pointer;
   padding: 10px;
-  z-index: 11;
+  z-index: 14;
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
@@ -188,7 +188,7 @@ export const MobileMenuContent = styled.div<{ isMenuOpen: boolean }>`
     max-height: ${({ isMenuOpen }) => (isMenuOpen ? "calc(100dvh)" : "0")};
     display: flex;
     flex-direction: column;
-    z-index: 16;
+    z-index: 19;
     justify-content: space-between;
     align-items: flex-start;
     gap: 10px;
