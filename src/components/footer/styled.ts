@@ -4,6 +4,7 @@ import { theme } from "../../global/theme";
 export const MainContainer = styled.div`
   height: 56px;
   width: 100%;
+  z-index: 13;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   display: flex;
