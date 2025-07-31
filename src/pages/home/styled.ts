@@ -53,6 +53,7 @@ export const TextContainer = styled.div`
   height: 100%;
   flex-direction: column;
   box-sizing: border-box;
+  z-index: 13;
   @media (max-width: 1024px) {
     padding-left: 5%;
     width: 90%; 
