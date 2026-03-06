@@ -43,6 +43,15 @@ export const allProjects: ProjectData[] = [
     ],
     projectUrl: "https://github.com/TechGymPro",
   },
+  {
+    id: "project-beetalent",
+    title: "Project 4 // BeeTalent",
+    image: "/beetalent-logo.png",
+    description:
+      "Presentation page for the BeeTalent platform, developed for a tech talent recruitment company.",
+    technologies: ["React", "TypeScript", "JavaScript"],
+    projectUrl: "https://beetalent.tech",
+  },
 ];
 
 export const techIcons: { [key: string]: string } = {
